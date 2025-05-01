@@ -38,6 +38,8 @@ export const postGroupSchema = z.enum([
 export type PostGroup = z.infer<typeof postGroupSchema>;
 
 export const postSchema = z.object({
+  id: z.string(),
+
   group: postGroupSchema,
   source: z.string(),
 
