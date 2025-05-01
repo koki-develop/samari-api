@@ -1,16 +1,16 @@
 import { OpenAPIRoute, type OpenAPIRouteSchema } from "chanfana";
-import { z } from "zod";
-import { type AppContext, postSchema } from "../../lib/types";
-import { getFirebaseApp } from "../../lib/firebase";
 import {
-  getFirestore,
   collection,
+  getDocs,
+  getFirestore,
+  limit,
+  orderBy,
   query,
   where,
-  orderBy,
-  limit,
-  getDocs,
 } from "firebase/firestore/lite";
+import { z } from "zod";
+import { getFirebaseApp } from "../../lib/firebase";
+import { type AppContext, postSchema } from "../../lib/types";
 
 export class PostList extends OpenAPIRoute {
   readonly schema: OpenAPIRouteSchema = {
