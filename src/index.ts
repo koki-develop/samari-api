@@ -4,6 +4,7 @@ import { TaskCreate } from "./endpoints/taskCreate";
 import { TaskDelete } from "./endpoints/taskDelete";
 import { TaskFetch } from "./endpoints/taskFetch";
 import { TaskList } from "./endpoints/taskList";
+import { PostList } from "./endpoints/post/list";
 
 // Start a Hono app
 const app = new Hono<{ Bindings: Env }>();
@@ -12,6 +13,8 @@ const app = new Hono<{ Bindings: Env }>();
 const openapi = fromHono(app, {
   docs_url: "/",
 });
+
+openapi.get("/v1/posts", PostList);
 
 // Register OpenAPI endpoints
 openapi.get("/api/tasks", TaskList);
