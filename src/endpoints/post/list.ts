@@ -2,8 +2,8 @@ import { OpenAPIRoute, type OpenAPIRouteSchema } from "chanfana";
 import { getFirestore } from "firebase/firestore/lite";
 import { z } from "zod";
 import { getFirebaseApp } from "../../lib/firebase";
-import { type AppContext, postSchema } from "../../lib/types";
 import { getPosts } from "../../lib/post";
+import { type AppContext, postSchema } from "../../lib/types";
 
 export class PostList extends OpenAPIRoute {
   readonly schema: OpenAPIRouteSchema = {
@@ -11,6 +11,7 @@ export class PostList extends OpenAPIRoute {
     summary: "List Posts",
     request: {
       query: z.object({
+        cursor: z.string().optional(),
         limit: z.number().min(1).max(100).default(30),
       }),
     },
@@ -21,6 +22,7 @@ export class PostList extends OpenAPIRoute {
           "application/json": {
             schema: z.object({
               posts: postSchema.array(),
+              nextCursor: z.string().nullable(),
             }),
           },
         },
@@ -35,9 +37,16 @@ export class PostList extends OpenAPIRoute {
     const firestore = getFirestore(firebase);
 
     const posts = await getPosts(firestore, {
-      limit: request.query.limit,
+      limit: request.query.limit + 1,
+      cursor: request.query.cursor,
     });
 
-    return { posts };
+    return {
+      posts: posts.slice(0, request.query.limit),
+      nextCursor:
+        posts.length > request.query.limit
+          ? posts[request.query.limit - 1].id
+          : null,
+    };
   }
 }
