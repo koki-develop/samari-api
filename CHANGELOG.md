@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/koki-develop/samari-api/compare/v0.1.3...v0.1.4) (2025-05-02)
+
+
+### Bug Fixes
+
+* Update doc ([4a0a5d6](https://github.com/koki-develop/samari-api/commit/4a0a5d6664855b2d87af81b6de7b2512f72a9671))
+
 ## [0.1.3](https://github.com/koki-develop/samari-api/compare/v0.1.2...v0.1.3) (2025-05-02)
 
 
