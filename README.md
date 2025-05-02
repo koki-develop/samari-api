@@ -2,6 +2,10 @@
 
 API for [SAMARI](https://samari.news).
 
-# License
+## Documentation
+
+[API Documentation](https://api.samari.news)
+
+## License
 
 [MIT](./LICENSE)
