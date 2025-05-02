@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "fmt": "biome check --write --unsafe .",
+    "lint": "biome check .",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "start": "wrangler dev",
