@@ -9,6 +9,19 @@
   "compatibility_date": "2025-04-30",
   "observability": {
     "enabled": true
+  },
+  "unsafe": {
+    "bindings": [
+      {
+        "name": "RATE_LIMITER",
+        "type": "ratelimit",
+        "namespace_id": "1",
+        "simple": {
+          "limit": 100,
+          "period": 60
+        }
+      }
+    ]
   }
   /**
    * Smart Placement
