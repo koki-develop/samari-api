@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/koki-develop/samari-api/compare/v0.1.0...v0.1.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* Set environment ([f43c923](https://github.com/koki-develop/samari-api/commit/f43c9230b198e0234ac024343a5257c217751c7e))
+
 ## 0.1.0 (2025-05-02)
 
 
