@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/koki-develop/samari-api/compare/v0.1.1...v0.1.2) (2025-05-02)
+
+
+### Bug Fixes
+
+* Recreate bun.lock ([d4c4938](https://github.com/koki-develop/samari-api/commit/d4c4938639147d3b1aeee65f6ffd9fd52e35585b))
+
 ## [0.1.1](https://github.com/koki-develop/samari-api/compare/v0.1.0...v0.1.1) (2025-05-02)
 
 
