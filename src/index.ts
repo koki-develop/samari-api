@@ -8,6 +8,6 @@ const openapi = fromHono(app, {
   docs_url: "/",
 });
 
-openapi.get("/v1/posts", PostList);
+openapi.get("/v0/posts", PostList);
 
 export default app;
