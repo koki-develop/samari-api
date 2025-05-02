@@ -12,10 +12,11 @@ import {
   startAfter,
   where,
 } from "firebase/firestore/lite";
-import type { Post } from "./types";
+import type { Post, PostGroup } from "./types";
 
 export type GetPostsParameters = {
   limit: number;
+  group?: PostGroup;
   cursor?: string;
 };
 
@@ -30,6 +31,10 @@ export async function getPosts(
     orderBy("timestamp", "desc"),
     limit(params.limit),
   ];
+
+  if (params.group) {
+    constraints.push(where("group", "==", params.group));
+  }
 
   if (params.cursor) {
     const cursorQuery = query(

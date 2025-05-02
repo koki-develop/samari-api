@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore/lite";
 import { z } from "zod";
 import { getFirebaseApp } from "../../lib/firebase";
 import { getPosts } from "../../lib/post";
-import { type AppContext, postSchema } from "../../lib/types";
+import { type AppContext, postGroupSchema, postSchema } from "../../lib/types";
 
 export class PostList extends OpenAPIRoute {
   readonly schema: OpenAPIRouteSchema = {
@@ -11,8 +11,9 @@ export class PostList extends OpenAPIRoute {
     summary: "List Posts",
     request: {
       query: z.object({
-        cursor: z.string().optional(),
+        group: postGroupSchema.optional(),
         limit: z.number().min(1).max(100).default(30),
+        cursor: z.string().optional(),
       }),
     },
     responses: {
@@ -37,6 +38,7 @@ export class PostList extends OpenAPIRoute {
     const firestore = getFirestore(firebase);
 
     const posts = await getPosts(firestore, {
+      group: request.query.group,
       limit: request.query.limit + 1,
       cursor: request.query.cursor,
     });
