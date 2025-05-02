@@ -12,11 +12,23 @@ on:
       - main
 
 jobs:
-  # TODO: implement
-  # release-please:
+  release-please:
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    outputs:
+      should-release-production: ${{ steps.release-please.outputs.release_created }}
+    steps:
+      - uses: googleapis/release-please-action@a02a34c4d625f9be7cb89156071d8567266a2445 # v4.2.0
+        id: release-please
+        with:
+          release-type: node
 
   deploy:
-    # if: # TODO: implement
+    needs: release-please
+    if: ${{ needs.release-please.outputs.should-release-production }}
     timeout-minutes: 10
     permissions:
       contents: read
