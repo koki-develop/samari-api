@@ -1,5 +1,11 @@
 name: CI
 
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
 on:
   pull_request:
   push:
