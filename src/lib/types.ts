@@ -9,7 +9,7 @@ export const postGroupSchema = z.enum([
   "CircleCI",
   "GitHub",
   "GitLab",
-  // Cloud/Infrastucture
+  // Cloud/Infrastructure
   "AWS",
   "Azure",
   "Firebase",
