@@ -1,6 +1,7 @@
 import { fromHono } from "chanfana";
 import { Hono } from "hono";
 import { PostList } from "./endpoints/post/list";
+import { version } from "../package.json";
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -16,6 +17,13 @@ app.use(async (c, next) => {
 
 const openapi = fromHono(app, {
   docs_url: "/",
+  schema: {
+    info: {
+      title: "SAMARI API",
+      version,
+      description: "API for [SAMARI](https://samari.news).",
+    },
+  },
 });
 
 openapi.get("/v0/posts", PostList);
