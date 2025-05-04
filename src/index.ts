@@ -1,7 +1,7 @@
 import { fromHono } from "chanfana";
 import { Hono } from "hono";
-import { PostList } from "./endpoints/post/list";
 import { version } from "../package.json";
+import { PostList } from "./endpoints/post/list";
 
 const app = new Hono<{ Bindings: Env }>();
 
