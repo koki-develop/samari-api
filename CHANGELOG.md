@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/koki-develop/samari-api/compare/v0.1.4...v0.1.5) (2025-05-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v3.24.4 ([#19](https://github.com/koki-develop/samari-api/issues/19)) ([9dc82da](https://github.com/koki-develop/samari-api/commit/9dc82daa769a76f552d56c0b6aa8b50f53d711f0))
+
 ## [0.1.4](https://github.com/koki-develop/samari-api/compare/v0.1.3...v0.1.4) (2025-05-02)
 
 
