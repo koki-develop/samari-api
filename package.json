@@ -20,6 +20,6 @@
     "@biomejs/biome": "1.9.4",
     "@types/node": "22.15.16",
     "@types/service-worker-mock": "2.0.4",
-    "wrangler": "4.14.1"
+    "wrangler": "4.14.4"
   }
 }
