@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.6](https://github.com/koki-develop/samari-api/compare/v0.1.5...v0.1.6) (2025-07-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency firebase to v11.8.1 ([#24](https://github.com/koki-develop/samari-api/issues/24)) ([a66c5cc](https://github.com/koki-develop/samari-api/commit/a66c5cc3f598c706e8aeb2496409b4d7f821d7dc))
+* **deps:** update dependency hono to v4.7.10 ([#26](https://github.com/koki-develop/samari-api/issues/26)) ([200369e](https://github.com/koki-develop/samari-api/commit/200369e1bfca40cfef049588cf5cc7209eb541b1))
+
 ## [0.1.5](https://github.com/koki-develop/samari-api/compare/v0.1.4...v0.1.5) (2025-05-06)
 
 
