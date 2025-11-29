@@ -2,6 +2,7 @@ import { fromHono } from "chanfana";
 import { Hono } from "hono";
 import { version } from "../package.json";
 import { PostList } from "./endpoints/post/list";
+import { GroupList } from "./endpoints/group/list";
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -27,5 +28,6 @@ const openapi = fromHono(app, {
 });
 
 openapi.get("/v0/posts", PostList);
+openapi.get("/v0/groups", GroupList);
 
 export default app;
