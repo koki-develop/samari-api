@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/koki-develop/samari-api/compare/v0.1.6...v0.2.0) (2025-11-29)
+
+
+### Features
+
+* **groups:** add endpoint to list groups ([1760ed7](https://github.com/koki-develop/samari-api/commit/1760ed71c6a106ad23cee6af9b0158e6cf73f806))
+
+
+### Bug Fixes
+
+* **deps:** update dependency chanfana to v2.8.3 ([#34](https://github.com/koki-develop/samari-api/issues/34)) ([13494a2](https://github.com/koki-develop/samari-api/commit/13494a25c2e6fb39aef54f93bd301074d0d56783))
+* **deps:** update dependency hono to v4.10.3 [security] ([#36](https://github.com/koki-develop/samari-api/issues/36)) ([e93b017](https://github.com/koki-develop/samari-api/commit/e93b0174ae29b1a1c4b1c01287ed2415bbe84cad))
+* **deps:** update dependency zod to v3.25.76 ([#32](https://github.com/koki-develop/samari-api/issues/32)) ([b87d96b](https://github.com/koki-develop/samari-api/commit/b87d96b72cd5f082b916d9f6d3ca9a8673cc486e))
+
 ## [0.1.6](https://github.com/koki-develop/samari-api/compare/v0.1.5...v0.1.6) (2025-07-14)
 
 
