@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/koki-develop/samari-api/compare/v0.2.0...v0.2.1) (2026-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency hono to v4.12.14 [security] ([#46](https://github.com/koki-develop/samari-api/issues/46)) ([86e41a9](https://github.com/koki-develop/samari-api/commit/86e41a936f8c5e0d60a8ab133b06474a58005b92))
+
 ## [0.2.0](https://github.com/koki-develop/samari-api/compare/v0.1.6...v0.2.0) (2025-11-29)
 
 
